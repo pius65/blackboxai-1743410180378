@@ -3,87 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Shoe Haven</title>
+    <title>Contact Us | Software Masters</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="scripts.js" defer></script>
 </head>
 <body class="bg-gray-50">
+    <!-- Header -->
     <div id="header-placeholder"></div>
 
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-r from-blue-800 to-blue-600 text-white py-24">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
+            <p class="text-xl">Get in touch with our team for inquiries or consultations</p>
+        </div>
+        <div class="absolute inset-0 bg-[url('https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg')] bg-cover bg-center -z-10 opacity-20"></div>
+    </section>
+
+    <!-- Contact Section -->
     <section class="py-16">
         <div class="container mx-auto px-6">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-3xl font-bold text-center mb-12">Contact Us</h2>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <!-- Contact Form -->
-                    <div class="bg-white rounded-lg shadow-md p-6">
-                        <h3 class="text-xl font-bold mb-4">Send Us a Message</h3>
-                        <form id="contact-form">
-                            <div class="mb-4">
-                                <label class="block text-gray-700 mb-2" for="name">Name</label>
-                                <input type="text" id="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" required>
-                            </div>
-                            <div class="mb-4">
-                                <label class="block text-gray-700 mb-2" for="email">Email</label>
-                                <input type="email" id="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" required>
-                            </div>
-                            <div class="mb-4">
-                                <label class="block text-gray-700 mb-2" for="message">Message</label>
-                                <textarea id="message" rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" required></textarea>
-                            </div>
-                            <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition duration-300">Send Message</button>
-                        </form>
-                    </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div class="bg-white rounded-lg shadow-md p-8">
+                    <h2 class="text-2xl font-bold mb-6 text-blue-600">Send Us a Message</h2>
+                    <form id="contact-form" class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-gray-700 mb-2">Full Name</label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                            <p id="name-error" class="text-red-500 text-sm mt-1 hidden">Please enter your name</p>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 mb-2">Email Address</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                            <p id="email-error" class="text-red-500 text-sm mt-1 hidden">Please enter a valid email</p>
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-gray-700 mb-2">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label for="service" class="block text-gray-700 mb-2">Service Interested In</label>
+                            <select id="service" name="service" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                <option value="">Select a service</option>
+                                <option value="web-development">Web Development</option>
+                                <option value="cctv">CCTV Installation</option>
+                                <option value="design">Posters & Fliers Design</option>
+                                <option value="consultation">IT Consultation</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-700 mb-2">Your Message</label>
+                            <textarea id="message" name="message" rows="4" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                            <p id="message-error" class="text-red-500 text-sm mt-1 hidden">Please enter your message</p>
+                        </div>
+                        <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300 w-full">Send Message</button>
+                    </form>
+                </div>
 
-                    <!-- Contact Information -->
-                    <div class="bg-white rounded-lg shadow-md p-6">
-                        <h3 class="text-xl font-bold mb-4">Our Information</h3>
+                <!-- Contact Info -->
+                <div>
+                    <div class="bg-white rounded-lg shadow-md p-8 mb-6">
+                        <h2 class="text-2xl font-bold mb-6 text-blue-600">Our Office</h2>
                         <div class="space-y-4">
                             <div class="flex items-start">
-                                <i class="fas fa-map-marker-alt text-blue-600 mt-1 mr-3"></i>
+                                <i class="fas fa-map-marker-alt text-blue-500 mt-1 mr-4"></i>
                                 <div>
-                                    <h4 class="font-bold">Address</h4>
-                                    <p class="text-gray-600">123 Shoe Street, Footwear City</p>
+                                    <h3 class="font-semibold">Address</h3>
+                                    <p class="text-gray-600">Plot 123, Nairobi Innovation Hub<br>Nairobi, Kenya</p>
                                 </div>
                             </div>
                             <div class="flex items-start">
-                                <i class="fas fa-phone-alt text-blue-600 mt-1 mr-3"></i>
+                                <i class="fas fa-phone-alt text-blue-500 mt-1 mr-4"></i>
                                 <div>
-                                    <h4 class="font-bold">Phone</h4>
-                                    <p class="text-gray-600">(123) 456-7890</p>
+                                    <h3 class="font-semibold">Phone</h3>
+                                    <p class="text-gray-600">+254 7XX XXX XXX</p>
                                 </div>
                             </div>
                             <div class="flex items-start">
-                                <i class="fas fa-envelope text-blue-600 mt-1 mr-3"></i>
+                                <i class="fas fa-envelope text-blue-500 mt-1 mr-4"></i>
                                 <div>
-                                    <h4 class="font-bold">Email</h4>
-                                    <p class="text-gray-600">info@shoehaven.com</p>
+                                    <h3 class="font-semibold">Email</h3>
+                                    <p class="text-gray-600">contact@softwaremasters.ke</p>
                                 </div>
                             </div>
                             <div class="flex items-start">
-                                <i class="fas fa-clock text-blue-600 mt-1 mr-3"></i>
+                                <i class="fas fa-clock text-blue-500 mt-1 mr-4"></i>
                                 <div>
-                                    <h4 class="font-bold">Business Hours</h4>
-                                    <p class="text-gray-600">Monday - Friday: 9am - 6pm</p>
-                                    <p class="text-gray-600">Saturday: 10am - 4pm</p>
+                                    <h3 class="font-semibold">Business Hours</h3>
+                                    <p class="text-gray-600">Monday - Friday: 8:00 AM - 5:00 PM<br>Saturday: 9:00 AM - 1:00 PM</p>
                                 </div>
                             </div>
                         </div>
+                    </div>
+
+                    <!-- Map -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.808477395486!2d36.82115931475399!3d-1.292359599054999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10d664b39e67%3A0x2f5fe2e991cc5ba2!2sNairobi%20City%20Centre!5e0!3m2!1sen!2ske!4v1620000000000!5m2!1sen!2ske" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <div id="footer-placeholder"></div>
 
     <script>
-        document.getElementById('contact-form').addEventListener('submit', (e) => {
+        // Form validation
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('Thank you for your message! We will get back to you soon.');
-            e.target.reset();
+            let isValid = true;
+
+            // Validate name
+            const name = document.getElementById('name');
+            const nameError = document.getElementById('name-error');
+            if (!name.value.trim()) {
+                nameError.classList.remove('hidden');
+                isValid = false;
+            } else {
+                nameError.classList.add('hidden');
+            }
+
+            // Validate email
+            const email = document.getElementById('email');
+            const emailError = document.getElementById('email-error');
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email.value)) {
+                emailError.classList.remove('hidden');
+                isValid = false;
+            } else {
+                emailError.classList.add('hidden');
+            }
+
+            // Validate message
+            const message = document.getElementById('message');
+            const messageError = document.getElementById('message-error');
+            if (!message.value.trim()) {
+                messageError.classList.remove('hidden');
+                isValid = false;
+            } else {
+                messageError.classList.add('hidden');
+            }
+
+            if (isValid) {
+                // Form submission logic would go here
+                alert('Thank you for your message! We will contact you soon.');
+                this.reset();
+            }
         });
     </script>
 </body>
